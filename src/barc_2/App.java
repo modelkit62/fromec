@@ -61,8 +61,9 @@ public class App {
 					System.out.println(s.getName());
 			}
 
-			p1.setSubjects(subjects);
+			//p1.setSubjects(subjects);
 			System.out.println(p1.getName());
+			System.out.println(p1.getSubjects());
 
 		}
 
