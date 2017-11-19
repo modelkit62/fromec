@@ -10,7 +10,8 @@ public class App {
 
 		Person p1 = createStudent();
 
-		subjectsIteration(p1);
+		// subjectsIteration(p1);
+		iterarTwo(p1);
 
 	}
 
@@ -36,6 +37,32 @@ public class App {
 		return p1;
 	}
 
+	public static void iterarTwo(Person p2) {
+		if (p2.getSubjects() != null && p2.getSubjects().size() > 0) {
+			Iterator it = p2.getSubjects().iterator();
+
+			List<Subject> lista = new ArrayList<>();
+			Subject subject;
+
+			while (it.hasNext()) {
+				subject = new Subject();
+				Subject next = (Subject) it.next();
+
+				if (next != null) {
+					subject.setName(next.getName());
+				}
+
+				lista.add(subject);
+
+			}
+			for (Subject s : lista) {
+				System.out.println(s.getName());
+			}
+
+		}
+
+	}
+
 	public static void subjectsIteration(Person p1) {
 
 		if (p1.getSubjects() != null && p1.getSubjects().size() > 0) {
@@ -54,14 +81,14 @@ public class App {
 					subject.setName(next.getName());
 				}
 				subjects.add(subject);
-				
-			}
-			
-			for (Subject s : subjects) {
-					System.out.println(s.getName());
+
 			}
 
-			//p1.setSubjects(subjects);
+			for (Subject s : subjects) {
+				System.out.println(s.getName());
+			}
+
+			// p1.setSubjects(subjects);
 			System.out.println(p1.getName());
 			System.out.println(p1.getSubjects());
 
