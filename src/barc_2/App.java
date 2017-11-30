@@ -51,18 +51,14 @@ public class App {
 				if (next != null) {
 					subject.setName(next.getName());
 				}
-
 				lista.add(subject);
-
 			}
 			for (Subject s : lista) {
 				System.out.println(s.getName());
 			}
-
 		}
-
 	}
-
+	
 	public static void subjectsIteration(Person p1) {
 
 		if (p1.getSubjects() != null && p1.getSubjects().size() > 0) {
@@ -87,13 +83,9 @@ public class App {
 			for (Subject s : subjects) {
 				System.out.println(s.getName());
 			}
-
 			// p1.setSubjects(subjects);
 			System.out.println(p1.getName());
 			System.out.println(p1.getSubjects());
-
 		}
-
 	}
-
 }
